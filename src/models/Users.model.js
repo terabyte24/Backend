@@ -43,7 +43,7 @@ coverImage:{
 watchHistory: [
   {
     type: Schema.Types.ObjectId,
-    ref "Video"
+    ref :"video"
   }
 ],
 
