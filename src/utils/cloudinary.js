@@ -1,4 +1,4 @@
-import {v2 as cloudinary} from cloudinary;
+import {v2 as cloudinary} from "cloudinary";
 import fs from "fs"
 
     cloudinary.config({ 
@@ -16,8 +16,9 @@ try{ if(!localFilePath) return null
   })
 
 //file has been uploaded successfully
-console.log("file is uploaded on cloudinary" , response.url);
-return response
+// console.log("file is uploaded on cloudinary" , response.url);
+fs.unlinkSync(localFilePath)
+return response;
 } catch(error){
  fs.unlinkSync(localFilePath)  //--> removes the local file kept on the server
  return null;
