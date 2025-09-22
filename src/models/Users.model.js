@@ -71,7 +71,7 @@ userSchema.pre("save" , async function (next) {
  }
 
 
-userSchema.methods.generateAccessToken =function(){
+userSchema.methods.CCC =function(){
  return jwt.sign({
 
     _id:this._id,
